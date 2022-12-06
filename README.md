@@ -1,3 +1,6 @@
+#QR-code scan
+[Demo page](https://rqik.github.io/qr/)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
