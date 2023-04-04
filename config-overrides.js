@@ -15,5 +15,9 @@ const aliasMap = {
 
 module.exports = function override(config, _) {
   alias(aliasMap)(config);
-  return config;
+  return {...config, ignoreWarnings: [
+    {
+      module: /node_modules\/html5-qrcode/,
+    },
+  ],};
 };

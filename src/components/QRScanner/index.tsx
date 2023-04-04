@@ -1,13 +1,10 @@
-import { FC, useCallback, useEffect, useRef, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import { Html5Qrcode } from 'html5-qrcode';
 import Select from 'react-select';
 import { Html5QrcodeResult } from 'html5-qrcode/esm/core';
 
 import styles from './QRScanner.module.scss';
 
-const ViewFinder2 = (): JSX.Element => <div>22</div>;
-
-type FaceMode = 'user' | 'environment';
 type SelectOption = {
   value: string;
   label: string;
@@ -15,16 +12,13 @@ type SelectOption = {
 
 const qrReaderId = 'reader';
 const qrReaderId2 = 'reader2';
-const modeOption = [
-  { value: 'camera', label: 'Camera' },
-  { value: 'file', label: 'File' },
-];
+
 const config = {
   fps: 10, // Optional, frame per seconds for qr code scanning
   qrbox: { width: 250, height: 250 }, // Optional, if you want bounded box UI
 };
 
-const QRScanner: FC = (props) => {
+const QRScanner: FC = () => {
   const [data, setData] = useState<string | null>('No result');
   const [error, setError] = useState<string | null>('No result');
 
@@ -76,6 +70,7 @@ const QRScanner: FC = (props) => {
         html5QrCode.stop();
       }
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cameraId]);
 
   return (

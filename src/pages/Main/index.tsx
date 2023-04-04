@@ -6,7 +6,7 @@ import styles from './Main.module.scss';
 
 interface MainProps {}
 
-const Main: FC<MainProps> = (props) => (
+const Main: FC<MainProps> = () => (
   <div className={styles.main}>
     <QRScanner />
   </div>
