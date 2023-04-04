@@ -1,5 +1,5 @@
 # QR-code scan
-# [__Demo page__](https://rqik.github.io/QR-scan)
+# [__Demo page__](https://rqik.github.io/qr-scanner)
 
 # Getting Started with Create React App
 
